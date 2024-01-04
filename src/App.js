@@ -1,7 +1,6 @@
 import './App.css';
-import FoodCard from './components/Foodcard';
-import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -9,6 +8,7 @@ const App = () => {
     return(
         <>
             <Navbar/>
+            <Footer/>
         </>
     )
 }
