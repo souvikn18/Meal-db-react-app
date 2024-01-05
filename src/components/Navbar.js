@@ -64,17 +64,17 @@ const Navbar = () => {
         return(
             <>
             <Navbar/>
-            <div className="xl:flex xl:justify-center xl:gap-[10px]">
+            <div className="xl:flex xl:justify-center xl:gap-[10px] overflow-x-hidden">
                 <div className="flex flex-col my-4 xl:gap-2">
                     <img className="w-[300px] h-[300px] xl:w-[500px] xl:h-[400px]  mx-8 my-4" src={foodimage}/>
-                    <h2 className="mx-8 xl:text-5xl text-4xl w-[500px] h-[40px] ">{foodname}</h2>
-                    <h3 className="mx-8 xl:text-3xl text-2xl w-[300px] h-[30px] ">{foodcategory}</h3>
-                    <h3 className="mx-8 xl:text-3xl text-2xl w-[300px] h-[30px] ">{foodcountry}</h3>
+                    <h2 className="mx-8 xl:text-5xl text-3xl xl:w-[100%] w-[350px] h-[40px] ">{foodname}</h2>
+                    <h3 className="mx-8 xl:text-3xl text-xl w-[300px] h-[30px] ">{foodcategory}</h3>
+                    <h3 className="mx-8 xl:text-3xl text-xl w-[300px] h-[30px] ">{foodcountry}</h3>
                 </div>
                 <div className="xl:my-6 xl:flex xl:flex-col xl:gap-[20px]">
                     <div>
                         <h2 className="mx-8 xl:text-5xl text-4xl w-[300px] h-[40px] ">How to Cook</h2>
-                        <p className="mx-8 my-4 text-xl w-[400px] xl:w-[900px]">{cookinginstruction}</p>
+                        <p className="mx-8 my-4 text-xl w-[300px] xl:w-[900px]">{cookinginstruction}</p>
                     </div>
                     <div>
                         <h2 className="mx-8 text-4xl xl:text-5xl w-[300px] h-[40px] ">Ingridients</h2>
@@ -102,7 +102,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="mb-8">
-                        <h3 className="mx-8 text-2xl w-[400px] h-[40px] ">Recipe video link: <a className="text-blue-600" href={link} >{foodname}</a></h3>
+                        <h3 className="mx-8 text-2xl w-[350px] xl:w-[100%] xl:h-[40px] h-[70px] ">Recipe video link: <a className="text-blue-600" href={link} >{foodname}</a></h3>
                     </div>
                 </div>
             </div>
@@ -112,12 +112,12 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="flex flex-col xl:flex-row xl:gap-[40%] justify-center gap-[10px] my-4">
+            <nav className="flex flex-col xl:flex-row xl:gap-[40%] justify-center gap-[10px] my-4 overflow-x-hidden">
                 <div className="h-[40px] w-[400px] text-3xl font-bold px-8">
                     <h1 className="tracking-widest">The Meal Book</h1>
                 </div>
                 <form className="px-8 h-[50px] w-[400px] flex" onSubmit={handleSubmit}>
-                    <input className="border border-slate-400 outline-0 outline-slate-400 rounded-2xl pl-2 pr-[70px] h-[30px] w-[300px] " value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search here"/>
+                    <input className="text-sm border border-slate-400 outline-0 outline-slate-400 rounded-2xl pl-2 pr-[70px] h-[30px] w-[300px] " value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search here"/>
                     <button className="h-[30px] w-[70px] rounded-2xl relative right-[60px] bg-sky-600 text-sky-50" onClick={fetchDetails}>Search</button>
                 </form>
             </nav>
